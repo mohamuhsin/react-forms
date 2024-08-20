@@ -1,6 +1,9 @@
 import { useRef } from "react";
 
 export default function Login() {
+  const email = useRef();
+  const password = useRef();
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -8,10 +11,10 @@ export default function Login() {
     const enteredPassword = password.current.value;
 
     console.log(enteredEmail, enteredPassword);
-  }
 
-  const email = useRef();
-  const password = useRef();
+    email.current.value = ""; // reseting the email input in useRef
+    password.current.value = ""; // reseting the password input in useRef
+  }
 
   return (
     <form onSubmit={handleSubmit}>
