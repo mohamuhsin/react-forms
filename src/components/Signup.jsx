@@ -7,6 +7,10 @@ export default function Signup() {
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
     console.log(data);
+
+    // const enteredEmail = fd.get("email");
+
+    event.target.reset(); // resetting in FormData Object
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -95,7 +99,7 @@ export default function Signup() {
       </div>
 
       <p className="form-actions">
-        <button type="reset" className="button button-flat">
+        <button type=" reset" className="button button-flat">
           Reset
         </button>
         <button type="submit" className="button">

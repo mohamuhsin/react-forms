@@ -12,6 +12,8 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(enteredValues);
+
+    setEnteredValues(""); //resetting a form in state
   }
 
   function handleInputChange(identifier, value) {
