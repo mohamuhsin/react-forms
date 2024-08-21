@@ -27,8 +27,15 @@ When the default behavior is prevented.
 The data on the forms can be collected in with any of the methods below.
 
 1. Use state to store inputs data which are updated on every keystroke via **two-way bidding**.
-2. Use refs to collect the data from the inputs by accessing the DOM directly. This is not recommended as it bad practice to manipulate DOM directly.
-3. Use the form data object provided by the browser.
+   e.g.
+   ```
+   setEnteredValues({
+      email: "",
+      password: "",
+    }); 
+   ```
+3. Use refs to collect the data from the inputs by accessing the DOM directly. This is not recommended as it bad practice to manipulate DOM directly.
+4. Use the form data object provided by the browser.
 
 ## Resetting forms
 Depending on the data collection approach used.
