@@ -44,7 +44,10 @@ Here is how to reset forms;
 1. Set states to empty strings
    e.g.
    ```javascript
-        setEnteredValues(""); //resetting a form in state
+        setEnteredValues({
+        email: "",
+        password: "",
+   }); //resetting a form in state
     ```
 2. Update refs with empty.
    e.g.
